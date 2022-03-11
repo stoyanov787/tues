@@ -1,0 +1,76 @@
+<!--positions with percentage-->
+<!--choose file button customization-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="shortcut icon" href="http://www.simpleimageresizer.com/_uploads/photos/928eef6a/implementing-artificial-intelligence-part-1-hero_16x16.jpg"/>
+        <title>
+            Space Mini Games
+        </title>
+        <style>
+          .jumbotron{
+              text-align: center;
+          }
+          .body{
+            background-color: rgba(72, 2, 78, 0.932);
+            color: white;
+          }
+          .html{
+            background-color: rgba(72, 2, 78, 0.932);
+            color: white;
+          }
+          
+         
+          
+      </style>
+    </head>
+    <body>
+        <!--main title-->
+        <div class="jumbotron" style="background-color: rgba(72, 2, 78, 0.932); color: white;">
+            <h1 class="display-4">Space Mini Games</h1>
+            <p class="lead">We are team OpenAI and this is our mini game site!</p>
+            <!--<hr class="my-4">-->
+            <!--<p class="center">It uses utility classes for typography and spacing to space content out within the larger container.</p>-->
+            <!--<a class="btn btn-primary btn-lg" href="#" role="button">About Us</a>-->
+          </div>
+
+        <!--planet guesser card with link-->
+
+          <div class="card" style="width: 25rem; position:absolute; left:250px; top:350px; background-color: rgba(72, 2, 78, 0.932); color: white;">
+            <img src="https://pm1.narvii.com/6741/b5d6150a6c58b2b35ea2d823435ed7fc4d6e2db6v2_00.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Planet Guesser</h5>
+              <p class="card-text">Insert an image of a planet and let the algorhitm tell you which one it is!</p>
+              <form enctype=multipart/form-data action="http://192.168.8.133:5100/planet-guesser" method="post">
+
+                <div>
+                  <input class="btn btn-primary" name="file" type="file" />
+                  <br>
+                  <br>
+                  <input class="btn btn-primary" type="submit" value="Upload" />
+                </div>
+              </form>
+              <!--<a href="{{ url_for('upload_file') }}" class="btn btn-primary">Choose file</a>
+              <a href="{{ url_for('upload_file') }}" class="btn btn-primary">Upload</a>--> 
+            </div>
+          </div>
+
+          <!--escape mars card with link-->
+
+          <div class="card" style="width: 25rem; position:absolute; right:250px; top:350px; background-color: rgba(72, 2, 78, 0.932); color: white;">
+            <img src="https://e3.365dm.com/19/08/1600x900/skynews-mars-rover-nasa_4758666.jpg?bypass-service-worker&20190829120302" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Escape Mars</h5>
+              <p class="card-text">Your spaceship has crashed on Mars! Rebuild your ship and escape the red planet, avoid dust and radiation.</p>
+              <a href="{{ url_for('home_page') }}" class="btn btn-primary">Play</a>
+            </div>
+          </div>
+        
+    </body>
+    
+</html>
