@@ -20,7 +20,7 @@ with open('result.json', 'w') as file:
     planet = f"{class_names[np.argmax(score)]}"
     accuracy = f"{round(100 * np.max(score), 2)}"
     text = wikipedia.summary(f'{planet}(planet)', sentences=2)
-    result_dict = {"planet": planet, "accuracy": accuracy, "text": text}
-    file.write(f'{result_dict}')
+    result_dict = {"planet": f"{planet}", "accuracy": accuracy, "text": f"{text}"}
+    file.write(f'data = {result_dict}')
 
 os.remove(f'/home/george/Python/planet_guesser/Test/{directory[0]}')
