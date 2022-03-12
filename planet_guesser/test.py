@@ -16,9 +16,9 @@ predictions = model.predict(img_array)
 score = tf.nn.softmax(predictions[0])
 
 with open('result.json', 'w') as file:
-    planet = class_names[np.argmax(score)]
-    accuracy = round(100 * np.max(score), 2)
-    result_dict = {planet: accuracy}
+    planet = f"{class_names[np.argmax(score)]}"
+    accuracy = f"{round(100 * np.max(score), 2)}"
+    result_dict = {"planet": planet, "accuracy": accuracy}
     file.write(f'{result_dict}')
 
 os.remove(f'/home/george/Python/planet_guesser/Test/{directory[0]}')
