@@ -22,7 +22,7 @@ with open('result.json', 'w') as file:
     text = wikipedia.summary(f'{planet}(planet)', sentences=2)
     result_dict = {"planet": f"{planet}", "accuracy": accuracy, "text": f"{text}"}
     result = f'data = {result_dict}'
-    result.replace('\'', '"')
+    result = result.replace('\'', '"')
     file.write(result)
 
 os.remove(f'/home/george/Python/planet_guesser/Test/{directory[0]}')
