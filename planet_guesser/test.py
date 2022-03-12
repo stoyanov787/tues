@@ -21,6 +21,8 @@ with open('result.json', 'w') as file:
     accuracy = f"{round(100 * np.max(score), 2)}"
     text = wikipedia.summary(f'{planet}(planet)', sentences=2)
     result_dict = {"planet": f"{planet}", "accuracy": accuracy, "text": f"{text}"}
-    file.write(f'data = {result_dict}')
+    result = f'data = {result_dict}'
+    result.replace('\'', '"')
+    file.write(result)
 
 os.remove(f'/home/george/Python/planet_guesser/Test/{directory[0]}')
