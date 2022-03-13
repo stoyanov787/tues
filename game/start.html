@@ -10,6 +10,12 @@
             padding: 0;
             overflow: hidden;
         }
+        #finalHeader {
+            position: absolute;
+            left: 150px;
+            top: 200px;
+            color: rgb(158, 52, 3);
+        }
 
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -18,12 +24,15 @@
 </head>
 
 <body onload="init()">
+
+    <h1 id="finalHeader"><span id="finalText"></span></h1>
+    <script> alert("You have crashed on Mars! To repair your ship you first need to find its plans.") </script>
     <canvas id='canvas-id' width='800' height='600'>
 		<script>
 			 (function preloadImages() {
                 // Manually load image and backup colors names from ./images folder
-                const imageNameList = ["astronaut", "mars"];
-                const imageBackupColorList = ["black", "black"];
+                const imageNameList = ["astronaut", "mars", "fueltank", "backgroundfuel", "room", "rockwithiron", "rocket", "fakepart[2]", "fakepart[3]"];
+                const imageBackupColorList = ["black", "black", "black", "black", "black", "black", "black", "black", "black"];
 
                 for (let i = 0; i < imageNameList.length; i++) {
                     let name = imageNameList[i],
